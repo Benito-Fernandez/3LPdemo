@@ -30,5 +30,8 @@ The plot shows each hidden node contribution to the output and the network outpu
 
 Notes:
 - The network output is given by:
-- $y=b_0 + \sum{i=1}{i=n} V_i * \sigma(b_i + W_i*x)$
-- The input weight is the coeficient that multiplies the input, x
+- $y=b_0 + \sum_{i=1}^{i=n} V_i * \z_i$,
+- where, $\z_i = \sigma(b_i + W_i*x)$
+- The input weight, $W_i$, is the coeficient that multiplies the input, x, before the activation function takes place.
+- The bias, $b_i$, shifts the "activation region" for the node,
+- The output weight, $V_i$, is the coeficient that multiplies the hidden node output, z, to contribute to the network's output
