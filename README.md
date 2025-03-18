@@ -29,6 +29,8 @@ The GUI shows
 - a pull-down menu to select which activation function the hidden layer has (default is tanh),
 - a pull-down menu to select which selects which hidden node you want to "play" with (default is 1).
 
+![Screenshot 2025-03-18 121357](https://github.com/user-attachments/assets/91ba7edc-7476-4ab9-abbb-a0c80898c46d)
+
  Then, three sliders are shown for 
  - the selected hidden node input (input-to-hidden) Weight,
  - the selected hidden node Bias, and
@@ -38,7 +40,7 @@ The GUI shows
 The plot shows each hidden node contribution to the output and the network output.
 
 Notes:
-- The network output is given by:
+- The network output, $y$, is given by:
     - $y=b_0 + \sum_{i=1}^{i=n} V_i * z_i$,
     - $z_i = \sigma(\xi_i)$, is the hidden node's output value, it's activation;
     - $\xi_i = b_i + W_i*x$, in the hidden node's input, before activation;
@@ -46,6 +48,7 @@ Notes:
 - The input weight, $W_i$, is the coeficient that multiplies the input, $x$, before the activation function, $\sigma()$, takes place.
 - The bias, $b_i$, shifts the "activation region" for the node, combined with $W_i$.  The "center" of the activation is when $\xi_i=0$, which is at $c_i=-b_i/W_i$.
 - The output weight, $V_i$, is the coeficient that multiplies the hidden node output, $z$, to contribute to the network's output. It provides the scaling factor for the hidden node's output, $z_i$.
+- The network bias, $b_0$ moves the network's output up and down.  In this demo, $b_0=0$ for simplicity.
 
 The user, by moving the sliders, can see the influence of each.
 
