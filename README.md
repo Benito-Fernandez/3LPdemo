@@ -20,7 +20,7 @@ The GUI shows
 - a pull-down menu to select which activation function the hidden layer has (default is tanh),
 - a pull-down menu to select which selects which hidden node you want to "play" with (default is 1).
 
- Then, three scroll bars are shown for 
+ Then, three sliders are shown for 
  - the selected hidden node input (input-to-hidden) Weight,
  - the selected hidden node Bias, and
  - the selected hidden node output (hidden-to-output) Weight.
@@ -31,9 +31,13 @@ The plot shows each hidden node contribution to the output and the network outpu
 Notes:
 - The network output is given by:
     - $y=b_0 + \sum_{i=1}^{i=n} V_i * z_i$,
-    - $z_i = \sigma(\xi_i)$, is the hidden node's output value;
-    - $\xi_i = b_i + W_i*x$, in the hidden node's activation;
+    - $z_i = \sigma(\xi_i)$, is the hidden node's output value, it's activation;
+    - $\xi_i = b_i + W_i*x$, in the hidden node's input, before activation;
     - and $\sigma()$ is the node's activation function.
-- The input weight, $W_i$, is the coeficient that multiplies the input, x, before the activation function, $\sigma()$, takes place.
-- The bias, $b_i$, shifts the "activation region" for the node. Combined with $W_i$
-- The output weight, $V_i$, is the coeficient that multiplies the hidden node output, z, to contribute to the network's output. It provides the scaling factor for the hidden node's output, $z_i$.
+- The input weight, $W_i$, is the coeficient that multiplies the input, $x$, before the activation function, $\sigma()$, takes place.
+- The bias, $b_i$, shifts the "activation region" for the node, combined with $W_i$.  The "center" of the activation is when $\xi_i=0$, which is at $c_i=-b_i/W_i$.
+- The output weight, $V_i$, is the coeficient that multiplies the hidden node output, $z$, to contribute to the network's output. It provides the scaling factor for the hidden node's output, $z_i$.
+
+The user, by moving the sliders, can see the influence of each.
+
+Feel free to modify the code or add other activation functions.
