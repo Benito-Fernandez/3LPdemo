@@ -6,14 +6,23 @@ It is meant to be an instructional/learning environment.
 
 The output layer has a linear activation function and a bias that is the mean of the output in the data set.
 The hidden layer activation function can be one of:
+
 def linear(x):
-    return x
+
+  return x
+
 def sigmoid(x):
+
     return 1 / (1 + np.exp(-x))
+
 def tanh(x):
+
     return np.tanh(x)
+
 def rbf(x, c=0, s=1):
+
     return np.exp(-np.power((x - c), 2) / (2 * s**2))
+
 
 The GUI shows 
 - a field to specify how many hidden nodes are (default is 3),
